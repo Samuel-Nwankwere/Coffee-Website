@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+  --main-color:#be9c79;
+  --black:#333;
+  --white:#fff;
+  --light-color:#666;
+  --border:.2rem solid var(--black);
+  --box-shadow:0  .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+*{
+  font-family: 'Nunito',sans-serif;
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  outline:none;border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+*::selection{
+  background-color: var(--main-color);
+  color:var(--white);
+}
+
+::-webkit-scrollbar{
+  height: .5rem;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--black);
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top:6rem;
+
+}
+
+
+section{
+  padding:3rem 2rem;
+  max-width: 1200px;
+  margin:0 auto;
+}
+.heading{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading img{
+  height: 4rem;
+}
+
+.heading h3{
+  font-size: 4rem;
+  color:  var(--black);
+  font-family: 'Merienda one',cursive;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--main-color);
+  padding: 1rem 3rem;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.btn:hover{
+  background-color: var(--black);
+  color:var(--white);
+}
+
+
+.header{
+position: sticky;
+top: 0; left: 0; right:0;
+background-color: var(--black);
+box-shadow: var(--box-shadow);
+z-index:1000;
+/*background: linear-gradient(90deg, var(--black),transparent 40%);*/
+}
+
+.header .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1.5rem 2rem;
+}
+
+h2{
+  color: var(--white);
+  font-family: 'Nunito',sans-serif;
+  font-size: 2rem;
+
+}
+.header .flex .logo img{
+  height:4rem;
+  padding-left: 2rem;
+}
+
+.header .flex .navbar a{
+  margin-left:2rem;
+  font-size: 1.5rem;
+  color: var(--white);
+  display:inline-block;
+}
+
+.header .flex .navbar a:hover{
+  text-decoration: underline;
+  color:var(--main-color);
+}
+
+#menu-btn{
+  display: none;
+  font-size: 2.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+
+.home-bgn{
+  background:linear-gradient(90deg, var(--black),transparent 70%),url(./img/coffee-image2.jpg)
+  no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-bgn .home{
+  min-height: 70rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.home-bgn .home  .content{
+  width: 50rem;
+  text-align: center;
+  color: black;
+  margin-left: 3rem;
+}
+
+
+.home-bgn .home  .content h3{
+  font-size: 6.5rem;
+  color:var(--white);
+  font-family: 'Merienda One' ,cursive;
+}
+
+.home-bgn .home  .content p{
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 1.5em;
+}
+
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap:4rem;
+}
+
+.about .image{
+  flex: 1 1 40rem;
+}
+
+.about .image img{
+  width: 100%;
+}
+
+.about .content{
+  flex:1 1 40rem;
+}
+
+
+.about .content h3{
+  font-size: 4rem;
+  color: var(--main-color);
+    font-family: 'Merienda One',cursive;
+    padding-bottom: 1rem;
+}
+
+
+.about .content p{
+  padding: 1rem 0;
+  line-height: 2;
+  color:var(--light-color);
+  font-size: 1.5rem;
+}
+
+
+
+.facility .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+  gap:1.5rem;
+  align-items:flex-start;
+}
+
+.facility .box-container .box{
+  text-align: center;
+}
+
+.facility .box-container img{
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.facility .box-container .box h3{
+  font-size: 2rem;
+  color: var(--black);
+  margin: 1rem 0;
+}
+
+.facility .box-container .box p{
+  line-height: 2;
+  font-size: 1.3rem;
+  color: var(--black);
+
+}
+
+.menu .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,30rem);
+  gap:1.5rem;
+  align-items:flex-start;
+  justify-content: center;
+}
+
+.menu .box-container .box{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu .box-container img{
+  margin-bottom: 1rem;
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.menu .box-container .box h3{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+
+.gallery .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+  gap:2rem;
+  justify-content: center;
+}
+
+.gallery .box-container img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.team .box-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,30rem);
+  gap:2rem;
+  justify-content: center;
+}
+.team .box-container .box{
+  text-align: center;
+}
+
+.team .box-container .box img{
+  height: 70%;
+  object-fit: cover;
+  margin-bottom: 3rem;
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.team .box-container .box h3{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.contact .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+.contact .row .image{
+  flex:1 1 50rem;
+}
+
+.contact .row .image img{
+  width: 100%;
+}
+
+.contact .row form{
+  flex:1 1 30rem;
+  border: var(--border);
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.contact .row form h3{
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--black);
+}
+
+
+.contact .row form .box{
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--black);
+  border: var(--border);
+  margin: 1rem 0;
+}
+
+
+.contact .row form .btn{
+  display:block;
+  margin: auto;
+}
+
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,30rem);
+  gap:2rem;
+  justify-content: center;
+}
+
+.footer .box-container .box{
+  text-align: center;
+}
+
+.footer .box-container .box i{
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 6rem;
+  height: 6rem;
+  width:6rem;
+  background-color:var(--main-color);
+  margin-bottom:1rem;
+  color: white;
+}
+
+.footer .box-container .box h3{
+  font-size: 2rem;
+  margin:1rem;
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light);
+}
+
+
+.footer .credit{
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: var(--border);
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.footer .credit span{
+  color: var(--main-color)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+      font-size: 55%;
+    }
+
+}
+
+
+@media (max-width:769px){
+#menu-btn{
+    display: inline-block;
+    transition: .2s linear;
+  }
+  #menu-btn.fa-times{
+    transform: rotate(180deg);
+  }
+
+  .header .flex .navbar{
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    /*background: linear-gradient(90deg, var(--white),transparent 20%);*/
+    border-top:var(--border);
+    border-bottom:var(--border);
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    transition: .3s linear;
+    background-color: var(--black);
+  }
+
+  .header .flex .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  }
+
+
+    .header .flex .navbar a{
+      display: block;
+      margin: 2rem;
+      color: var(--white);
+      font-family: 'Nunito',sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .home-bgn{
+      background-position: left;
+    }
+
+    .home-bgn .home{
+      justify-content: center;
+    }
+  .home-bgn .home .content h3{
+    font-size: 4rem;
+  }
+
+.about .content h3{
+  font-size: 3rem;
+}
+
+}
+
+
+
+
+@media (max-width:450px){
+
+    html{
+      font-size: 50%;
+    }
+.heading h3{
+  font-size: 2.5rem;
+}
+}
+
+
+
+
+  @media (max-width:414px){
+    
+  #menu-btn{
+      display: inline-block;
+      transition: .2s linear;
+    }
+    #menu-btn.fa-times{
+      transform: rotate(180deg);
+    }
+
+    .header .flex .navbar{
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      font-size: 2rem;
+      /*background: linear-gradient(90deg, var(--white),transparent 20%);*/
+      border-top:var(--border);
+      border-bottom:var(--border);
+      clip-path: polygon(0 0,100% 0,100% 0,0 0);
+      transition: .3s linear;
+      background-color: var(--black);
+    }
+
+    .header .flex .navbar.active{
+      clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+
+      .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+        color: var(--white);
+        font-family: 'Nunito',sans-serif;
+        font-size: 1.5rem;
+      }
+
+      .home-bgn{
+        background-position: left;
+      }
+
+      .home-bgn .home{
+        justify-content: center;
+      }
+    .home-bgn .home .content h3{
+      font-size: 4rem;
+    }
+
+  .about .content h3{
+    font-size: 3rem;
+  }
+
+  }
